@@ -17,7 +17,8 @@ $ composer require xu42/qznjw2014
 ## Usage
 
 ``` php
-    $qznjw2014 = new Qznjw2014('yourUsername', 'yourPassword');
+    require_once './vendor/autoload.php';
+    $qznjw2014 = new \Xu42\Qznjw2014\Qznjw2014('yourUsername', 'yourPassword');
     
 
     /**
