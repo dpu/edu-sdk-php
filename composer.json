@@ -1,0 +1,31 @@
+{
+    "name": "xu42/qznjw2014",
+    "description": "强智教学一体化服务平台 实现成绩课表等部分信息查询接口",
+    "keywords": [
+        "xu42",
+        "qznjw2014",
+        "dlpu",
+        "强智",
+        "教务"
+    ],
+    "homepage": "https://github.com/xu42/Qznjw2014",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xu42",
+            "homepage": "http://xu42.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xu42\\Qznjw2014\\": "src"
+        }
+    }
+}
