@@ -124,4 +124,13 @@ class Qznjw2014
         $userinfo = new Userinfo($this->cookie);
         return $userinfo->get();
     }
+
+    /**
+     * 学号与密码是否正确
+     * @return bool
+     */
+    public function isValid()
+    {
+        return $this->cookie ? true : false;
+    }
 }
