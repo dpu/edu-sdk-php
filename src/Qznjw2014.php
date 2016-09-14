@@ -126,6 +126,16 @@ class Qznjw2014
     }
 
     /**
+     * 当前周次
+     * @return string
+     */
+    public function currentWeek()
+    {
+        $currentWeek = new CurrentWeek($this->cookie);
+        return $currentWeek->get();
+    }
+
+    /**
      * 学号与密码是否正确
      * @return bool
      */
