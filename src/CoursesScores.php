@@ -27,7 +27,8 @@ class CoursesScores extends ToolCrawl
         $data[0][0] = empty($kksj)?'全部':$kksj;
         $postdata = "xsfs=$xsfs&kksj=$kksj&kcxz=$kcxz&kcmc=$kcmc";
         $content = $this->myCurl($this->url, $this->cookie, $postdata);
-        return $this->re($content);
+        $res = $this->re($content);
+        return $res[1];
     }
 
     /**

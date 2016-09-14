@@ -57,7 +57,7 @@ class Timetable extends ToolCrawl
         }
 
         $table = null;
-        for ($i = 1; $i < count($theory)-3; $i++) {
+        for ($i = 1; $i < count($theory)-4; $i++) {
             $k = 0;
             for ($j = 0; $j < count($theory[$i]);) {
                 if ($theory[$i][$j] != "&nbsp;" && $theory[$i][$j+3] != '----------------------') {
