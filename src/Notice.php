@@ -22,6 +22,9 @@ class Notice extends ToolCrawl
     public function get()
     {
         $content = $this->myCurl($this->url, $this->cookie);
+        if (is_null($content)) {
+            return null;
+        }
         return $this->re($content);
     }
 

@@ -77,6 +77,10 @@ class ToolLogin
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $content = curl_exec($ch);
+        if (curl_errno($ch)){
+            return null;
+        }
+        curl_close($ch);
         return $content;
     }
 

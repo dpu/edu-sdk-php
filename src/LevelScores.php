@@ -23,8 +23,10 @@ class LevelScores extends ToolCrawl
     public function get()
     {
         $content = $this->myCurl($this->url, $this->cookie);
-        $data = $this->re($content);
-        return $data;
+        if (is_null($content)) {
+            return null;
+        }
+        return $this->re($content);
     }
 
     /**

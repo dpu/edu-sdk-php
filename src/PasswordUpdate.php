@@ -28,7 +28,10 @@ class PasswordUpdate extends ToolCrawl
             return false;
         }
         $postdata = 'oldpassword=' . $oldPasswd . '&password1=' . $newPasswd . '&password2=' .$newPasswd .'&upt=1';
-        $this->myCurl($this->url, $this->cookie, $postdata);
+        $content = $this->myCurl($this->url, $this->cookie, $postdata);
+        if (is_null($content)) {
+            return false;
+        }
         return true;
     }
 

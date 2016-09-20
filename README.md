@@ -94,6 +94,13 @@ $ composer require xu42/qznjw2014
      * @return array
      */
     $qznjw2014->userinfo();
+    
+    
+    /**
+     * 当前周次
+     * @return string
+     */
+    $qznjw2014->currentWeek();
 
 ```
 

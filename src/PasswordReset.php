@@ -26,6 +26,9 @@ class PasswordReset extends ToolCrawl
     {
         $postdata = 'account='.$username.'&sfzjh='.$idCard;
         $content = $this->myCurl($this->url, '', $postdata);
+        if (is_null($content)) {
+            return null;
+        }
         $resetResult = $this->re($content);
         return $this->isResetSuccess($resetResult);
     }

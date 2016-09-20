@@ -25,6 +25,9 @@ class ExamsInfo extends ToolCrawl
     {
         $postdata = 'xnxqid=' . $semester . '&xqlb=' . $category;
         $content = $this->myCurl($this->url, $this->cookie, $postdata);
+        if(is_null($content)){
+            return null;
+        }
         return $this->re($content);
     }
 

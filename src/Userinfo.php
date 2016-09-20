@@ -23,6 +23,9 @@ class Userinfo extends ToolCrawl
     public function get()
     {
         $content = $this->myCurl($this->url, $this->cookie);
+        if (is_null($content)) {
+            return null;
+        }
         $data = $this->re($content);
         return $data;
     }

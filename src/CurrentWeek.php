@@ -21,9 +21,11 @@ class CurrentWeek extends ToolCrawl
      */
     public function get()
     {
-        $res_data = $this->myCurl($this->url, $this->cookie);
-        $data = $this->re($res_data);
-        return $data;
+        $content = $this->myCurl($this->url, $this->cookie);
+        if (is_null($content)) {
+            return null;
+        }
+        return $this->re($content);
     }
 
     /**

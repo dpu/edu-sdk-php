@@ -25,6 +25,9 @@ class Timetable extends ToolCrawl
     {
         $postdata = 'xnxq01id=' . $semester . '&zc=' . $week . '&sfFD=1&demo=&cj0701id=';
         $content = $this->myCurl($this->url, $this->cookie, $postdata);
+        if (is_null($content)) {
+            return null;
+        }
         return $this->re($content);
     }
 
