@@ -30,7 +30,8 @@ class CoursesScores extends ToolCrawl
         if(is_null($content)){
             return null;
         }
-        return $this->re($content);
+        $result = $this->re($content);
+        return $result[1];
     }
 
     /**
