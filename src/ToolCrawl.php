@@ -32,11 +32,11 @@ class ToolCrawl
      * 获取资源
      * @return mixed 格式化后(正则解析)的数据
      */
-    public function get()
-    {
-        $content = $this->myCurl($this->url, $this->cookie);
-        return $this->re($content);
-    }
+//    public function get()
+//    {
+//        $content = $this->myCurl($this->url, $this->cookie);
+//        return $this->re($content);
+//    }
 
     /**
      * 一个简单的封装CURL网络请求的函数
