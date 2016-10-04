@@ -2,6 +2,8 @@
 
 namespace Xu42\Qznjw2014;
 
+error_reporting(0);
+
 class Qznjw2014
 {
 
