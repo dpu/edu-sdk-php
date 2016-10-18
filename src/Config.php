@@ -11,9 +11,9 @@ namespace Xu42\Qznjw2014;
 class Config
 {
     public static $config = [
-        'url_index'           => 'http://jiaowu.dlpu.edu.cn/',         // 教务网站首页
-        'url_host'            => 'http://210.30.62.8:8080',            // HOST
-        'url_login'           => 'http://210.30.62.8:8080/jsxsd/',     // 教务系统首页地址
+        'url_index'           => '',         			       // 教务网站首页
+        'url_host'            => '',            		       // HOST
+        'url_login'           => '',                                   // 教务系统首页地址
         'url_login_verify'    => 'xk/LoginToXk',                       // 登陆时密码正确
         'url_courses_scores'  => 'kscj/cjcx_list',                     // 课程成绩页地址
         'url_exams_info'      => 'xsks/xsksap_list',                   // 考试安排信息页地址
