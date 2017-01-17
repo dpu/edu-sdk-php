@@ -31,7 +31,7 @@ class CoursesScores extends ToolCrawl
             return null;
         }
         $result = $this->re($content);
-        return $result[1];
+        return $result;
     }
 
     /**
@@ -41,16 +41,10 @@ class CoursesScores extends ToolCrawl
      */
     protected function re($content)
     {
-        preg_match_all('/<span>(\d+?)(<|。<)/', $content, $credit);
-        $data = null;
-        for ($i=0;$i<count($credit[1]);$i++) {
-            $data[0][$i+1] = $credit[1][$i];
-        }
-
         preg_match_all('/<tr>\s(.*?)<\/tr>/s', $content, $t1_grade_list);
         for ($i=0;$i<count($t1_grade_list[1]);$i++) {
-            preg_match_all('/>(.{1,66}?)</', $t1_grade_list[1][$i], $t2_grade_list);
-            $data[1][$i] = $t2_grade_list[1];
+            preg_match_all('/(td>|">)(.{0,66}?)<\//', $t1_grade_list[1][$i], $t2_grade_list);
+            $data[$i] = $t2_grade_list[2];
         }
         return $data;
     }
