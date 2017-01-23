@@ -19,7 +19,7 @@ $ composer require xu42/qznjw2014
 ``` php
     require_once './vendor/autoload.php';
     $qznjw2014 = new \Xu42\Qznjw2014\Qznjw2014('yourUsername', 'yourPassword');
-    
+
 
     /**
      * 课程成绩
@@ -30,7 +30,7 @@ $ composer require xu42/qznjw2014
      * @return mixed
      */
     $qznjw2014->coursesScores($kksj='', $kcxz='', $kcmc='', $xsfs='all');
-    
+
 
     /**
      * 考试安排
@@ -39,14 +39,14 @@ $ composer require xu42/qznjw2014
      * @return mixed
      */
     $qznjw2014->examsinfo($semester, $category = '3');
-    
+
 
     /**
      * 等级考试成绩
      * @return array
      */
     $qznjw2014->levelScores();
-    
+
 
     /**
      * 已收公告
@@ -94,8 +94,8 @@ $ composer require xu42/qznjw2014
      * @return array
      */
     $qznjw2014->userinfo();
-    
-    
+
+
     /**
      * 当前周次
      * @return string
@@ -127,7 +127,7 @@ If you discover any security related issues, please using the issue tracker.
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The GPL2.0 License. Please see [License File](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/xu42/qznjw2014.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
