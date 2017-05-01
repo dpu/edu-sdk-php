@@ -113,21 +113,25 @@ class EducationBizImpl extends BaseBizImpl
                 }
             }
 
-            $table = null;
+            $tableBySection = null;
             for ($i = 1; $i < count($theory)-4; $i++) {
                 $k = 0;
                 for ($j = 0; $j < count($theory[$i]);) {
                     if ($theory[$i][$j] != "&nbsp;" && $theory[$i][$j+3] != '----------------------') {
-                        $table[$i-1][$k][0] = $theory[$i][$j];
-                        $table[$i-1][$k][1] = $theory[$i][$j+1];
-                        $table[$i-1][$k][2] = $theory[$i][$j+2];
-                        $table[$i-1][$k][3] = $theory[$i][$j+4];
+                        $tableBySection[$i-1][$k][0][0] = $theory[$i][$j];
+                        $tableBySection[$i-1][$k][0][1] = $this->pureString($theory[$i][$j+1]);
+                        $tableBySection[$i-1][$k][0][2] = $theory[$i][$j+2];
+                        $tableBySection[$i-1][$k][0][3] = $this->pureString($theory[$i][$j+4]);
                         $j += 7;
                     } elseif ($theory[$i][$j+3] == '----------------------') {
-                        $table[$i-1][$k][0] = $theory[$i][$j] . '/' . $theory[$i][$j+4];
-                        $table[$i-1][$k][1] = $theory[$i][$j+1] . '/' . $theory[$i][$j+14];
-                        $table[$i-1][$k][2] = $theory[$i][$j+2] . '/' . $theory[$i][$j+15];
-                        $table[$i-1][$k][3] = $theory[$i][$j+8] . '/' . $theory[$i][$j+13];
+                        $tableBySection[$i-1][$k][0][0] = $theory[$i][$j];
+                        $tableBySection[$i-1][$k][0][1] = $this->pureString($theory[$i][$j+1]);
+                        $tableBySection[$i-1][$k][0][2] = $theory[$i][$j+2];
+                        $tableBySection[$i-1][$k][0][3] = $this->pureString($theory[$i][$j+8]);
+                        $tableBySection[$i-1][$k][1][0] = $theory[$i][$j+4];
+                        $tableBySection[$i-1][$k][1][1] = $this->pureString($theory[$i][$j+14]);
+                        $tableBySection[$i-1][$k][1][2] = $theory[$i][$j+15];
+                        $tableBySection[$i-1][$k][1][3] = $this->pureString($theory[$i][$j+13]);
                         $j += 16;
                     } else {
                         $j += 2;
@@ -135,7 +139,15 @@ class EducationBizImpl extends BaseBizImpl
                     $k += 1;
                 }
             }
-            return $table;
+
+            $tableByWeek = null;
+            foreach ($tableBySection as $section => $table1) {
+                foreach ($table1 as $week => $table2) {
+                    $tableByWeek[$week][$section] = $table2;
+                }
+            }
+
+            return $tableByWeek;
         } catch (\Throwable $throwable) {
             LogUtils::info($throwable, '正则解析[Timetable]异常');
             throw new NotFoundException();
@@ -281,5 +293,11 @@ class EducationBizImpl extends BaseBizImpl
             LogUtils::info($throwable, '正则解析[SchoolRoll]异常');
             throw new NotFoundException();
         }
+    }
+
+    private function pureString($subject)
+    {
+        $re = preg_match('/(.*?)\(.*?\)/', $subject, $matches);
+        return ($re === 1) ? $matches[1] : $subject;
     }
 }
