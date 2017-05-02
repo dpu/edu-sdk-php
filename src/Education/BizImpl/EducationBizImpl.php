@@ -147,6 +147,7 @@ class EducationBizImpl extends BaseBizImpl
                 }
             }
 
+            ksort($tableByWeek);
             return $tableByWeek;
         } catch (\Throwable $throwable) {
             LogUtils::info($throwable, '正则解析[Timetable]异常');
