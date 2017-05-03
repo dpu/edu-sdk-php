@@ -118,20 +118,20 @@ class EducationBizImpl extends BaseBizImpl
                 $k = 0;
                 for ($j = 0; $j < count($theory[$i]);) {
                     if ($theory[$i][$j] != "&nbsp;" && $theory[$i][$j+3] != '----------------------') {
-                        $tableBySection[$i-1][$k][0][0] = $theory[$i][$j];
-                        $tableBySection[$i-1][$k][0][1] = $this->pureString($theory[$i][$j+1]);
-                        $tableBySection[$i-1][$k][0][2] = $theory[$i][$j+2];
-                        $tableBySection[$i-1][$k][0][3] = $this->pureString($theory[$i][$j+4]);
+                        $tableBySection[$i-1][$k][0]['name'] = $theory[$i][$j];
+                        $tableBySection[$i-1][$k][0]['week'] = $this->pureString($theory[$i][$j+1]);
+                        $tableBySection[$i-1][$k][0]['room'] = $theory[$i][$j+2];
+                        $tableBySection[$i-1][$k][0]['teacher'] = $this->pureString($theory[$i][$j+4]);
                         $j += 7;
                     } elseif ($theory[$i][$j+3] == '----------------------') {
-                        $tableBySection[$i-1][$k][0][0] = $theory[$i][$j];
-                        $tableBySection[$i-1][$k][0][1] = $this->pureString($theory[$i][$j+1]);
-                        $tableBySection[$i-1][$k][0][2] = $theory[$i][$j+2];
-                        $tableBySection[$i-1][$k][0][3] = $this->pureString($theory[$i][$j+8]);
-                        $tableBySection[$i-1][$k][1][0] = $theory[$i][$j+4];
-                        $tableBySection[$i-1][$k][1][1] = $this->pureString($theory[$i][$j+14]);
-                        $tableBySection[$i-1][$k][1][2] = $theory[$i][$j+15];
-                        $tableBySection[$i-1][$k][1][3] = $this->pureString($theory[$i][$j+13]);
+                        $tableBySection[$i-1][$k][0]['name'] = $theory[$i][$j];
+                        $tableBySection[$i-1][$k][0]['week'] = $this->pureString($theory[$i][$j+1]);
+                        $tableBySection[$i-1][$k][0]['room'] = $theory[$i][$j+2];
+                        $tableBySection[$i-1][$k][0]['teacher'] = $this->pureString($theory[$i][$j+8]);
+                        $tableBySection[$i-1][$k][1]['name'] = $theory[$i][$j+4];
+                        $tableBySection[$i-1][$k][1]['week'] = $this->pureString($theory[$i][$j+14]);
+                        $tableBySection[$i-1][$k][1]['room'] = $theory[$i][$j+15];
+                        $tableBySection[$i-1][$k][1]['teacher'] = $this->pureString($theory[$i][$j+13]);
                         $j += 16;
                     } else {
                         $j += 2;
