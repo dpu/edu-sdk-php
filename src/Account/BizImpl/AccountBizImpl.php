@@ -6,6 +6,7 @@ use Cn\Xu42\Qznjw2014\Account\Exception\LoginException;
 use Cn\Xu42\Qznjw2014\Common\BizImpl\BaseBizImpl;
 use Cn\Xu42\Qznjw2014\Common\Config\UrlConfig;
 use Cn\Xu42\Qznjw2014\Common\Exception\ArgumentException;
+use Cn\Xu42\Qznjw2014\Common\Exception\SystemException;
 use Cn\Xu42\Qznjw2014\Common\Utils\LogUtils;
 
 class AccountBizImpl extends BaseBizImpl
@@ -18,6 +19,12 @@ class AccountBizImpl extends BaseBizImpl
         $url = UrlConfig::LOGIN . UrlConfig::VERIFY;
 
         $curlResponse = $this->curlRequest($url, $postData);
+
+        if(false === $curlResponse) {
+            $e = new SystemException('学校教务系统繁忙, 请稍后重试');
+            LogUtils::info($e);
+            throw $e;
+        }
 
         preg_match('/Location:\s(.*?)\sContent/', $curlResponse, $matches);
 
