@@ -1,6 +1,6 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\Service;
+namespace Org\DLPU\EDU\Common\Service;
 
 
 class BaseService

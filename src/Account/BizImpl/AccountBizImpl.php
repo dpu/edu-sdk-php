@@ -1,13 +1,13 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Account\BizImpl;
+namespace Org\DLPU\EDU\Account\BizImpl;
 
-use Cn\Xu42\Qznjw2014\Account\Exception\LoginException;
-use Cn\Xu42\Qznjw2014\Common\BizImpl\BaseBizImpl;
-use Cn\Xu42\Qznjw2014\Common\Config\UrlConfig;
-use Cn\Xu42\Qznjw2014\Common\Exception\ArgumentException;
-use Cn\Xu42\Qznjw2014\Common\Exception\SystemException;
-use Cn\Xu42\Qznjw2014\Common\Utils\LogUtils;
+use Org\DLPU\EDU\Account\Exception\LoginException;
+use Org\DLPU\EDU\Common\BizImpl\BaseBizImpl;
+use Org\DLPU\EDU\Common\Config\UrlConfig;
+use Org\DLPU\EDU\Common\Exception\ArgumentException;
+use Org\DLPU\EDU\Common\Exception\SystemException;
+use Org\DLPU\EDU\Common\Utils\LogUtils;
 
 class AccountBizImpl extends BaseBizImpl
 {

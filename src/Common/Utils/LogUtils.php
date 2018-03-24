@@ -1,8 +1,8 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\Utils;
+namespace Org\DLPU\EDU\Common\Utils;
 
-use Cn\Xu42\Qznjw2014\Common\Config\MonologConfig;
+use Org\DLPU\EDU\Common\Config\MonologConfig;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 

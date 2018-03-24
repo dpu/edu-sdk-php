@@ -1,8 +1,8 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Account\Exception;
+namespace Org\DLPU\EDU\Account\Exception;
 
-use Cn\Xu42\Qznjw2014\Common\Exception\BaseException;
+use Org\DLPU\EDU\Common\Exception\BaseException;
 
 class LoginException extends BaseException
 {

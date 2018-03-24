@@ -1,9 +1,9 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Account\Service;
+namespace Org\DLPU\EDU\Account\Service;
 
-use Cn\Xu42\Qznjw2014\Account\BizImpl\AccountBizImpl;
-use Cn\Xu42\Qznjw2014\Common\Service\BaseService;
+use Org\DLPU\EDU\Account\BizImpl\AccountBizImpl;
+use Org\DLPU\EDU\Common\Service\BaseService;
 
 class AccountService extends BaseService
 {

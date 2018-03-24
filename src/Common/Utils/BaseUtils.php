@@ -1,6 +1,6 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\Utils;
+namespace Org\DLPU\EDU\Common\Utils;
 
 class BaseUtils
 {
