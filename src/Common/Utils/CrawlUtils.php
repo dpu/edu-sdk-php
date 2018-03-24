@@ -1,8 +1,8 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\Utils;
+namespace Org\DLPU\EDU\Common\Utils;
 
-use Cn\Xu42\Qznjw2014\Common\Config\UrlConfig;
+use Org\DLPU\EDU\Common\Config\UrlConfig;
 
 class CrawlUtils extends BaseUtils
 {

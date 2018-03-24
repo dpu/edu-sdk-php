@@ -1,6 +1,6 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\Exception;
+namespace Org\DLPU\EDU\Common\Exception;
 
 class SystemException extends BaseException
 {

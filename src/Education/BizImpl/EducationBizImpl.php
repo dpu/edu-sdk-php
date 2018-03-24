@@ -1,11 +1,11 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Education\BizImpl;
+namespace Org\DLPU\EDU\Education\BizImpl;
 
-use Cn\Xu42\Qznjw2014\Common\BizImpl\BaseBizImpl;
-use Cn\Xu42\Qznjw2014\Common\Config\UrlConfig;
-use Cn\Xu42\Qznjw2014\Common\Exception\NotFoundException;
-use Cn\Xu42\Qznjw2014\Common\Utils\LogUtils;
+use Org\DLPU\EDU\Common\BizImpl\BaseBizImpl;
+use Org\DLPU\EDU\Common\Config\UrlConfig;
+use Org\DLPU\EDU\Common\Exception\NotFoundException;
+use Org\DLPU\EDU\Common\Utils\LogUtils;
 
 class EducationBizImpl extends BaseBizImpl
 {

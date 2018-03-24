@@ -1,11 +1,11 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Common\BizImpl;
+namespace Org\DLPU\EDU\Common\BizImpl;
 
-use Cn\Xu42\Qznjw2014\Common\Exception\ArgumentException;
-use Cn\Xu42\Qznjw2014\Common\Exception\CurlException;
-use Cn\Xu42\Qznjw2014\Common\Utils\CrawlUtils;
-use Cn\Xu42\Qznjw2014\Common\Utils\LogUtils;
+use Org\DLPU\EDU\Common\Exception\ArgumentException;
+use Org\DLPU\EDU\Common\Exception\CurlException;
+use Org\DLPU\EDU\Common\Utils\CrawlUtils;
+use Org\DLPU\EDU\Common\Utils\LogUtils;
 
 class BaseBizImpl
 {

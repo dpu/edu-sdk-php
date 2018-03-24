@@ -1,14 +1,13 @@
 {
-    "name": "xu42/qznjw2014",
+    "name": "dpu/edu",
     "description": "强智教学一体化服务平台 实现成绩课表等部分信息查询接口",
     "keywords": [
-        "xu42",
-        "qznjw2014",
-        "dlpu",
+        "edu",
+        "dpu",
         "强智",
         "教务"
     ],
-    "homepage": "https://github.com/xu42/Qznjw2014",
+    "homepage": "https://github.com/dpu/edu-sdk-php",
     "license": "MIT",
     "authors": [
         {
@@ -23,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cn\\Xu42\\Qznjw2014\\": "src"
+            "Org\\DLPU\\EDU\\": "src"
         }
     },
     "repositories": {

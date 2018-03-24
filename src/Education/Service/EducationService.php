@@ -1,9 +1,9 @@
 <?php
 
-namespace Cn\Xu42\Qznjw2014\Education\Service;
+namespace Org\DLPU\EDU\Education\Service;
 
-use Cn\Xu42\Qznjw2014\Common\Service\BaseService;
-use Cn\Xu42\Qznjw2014\Education\BizImpl\EducationBizImpl;
+use Org\DLPU\EDU\Common\Service\BaseService;
+use Org\DLPU\EDU\Education\BizImpl\EducationBizImpl;
 
 class EducationService extends BaseService
 {
